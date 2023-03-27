@@ -32,10 +32,8 @@ $('.time-block').each(function () {
 });
 
   
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  
+
+  //added local storage to the text area to save the text and keep it there
   $('#hour-9 .description').val(localStorage.getItem('hour-9'));
   $('#hour-10 .description').val(localStorage.getItem('hour-10'));
   $('#hour-11 .description').val(localStorage.getItem('hour-11'));
@@ -51,6 +49,13 @@ $('.time-block').each(function () {
   $('#hour-21 .description').val(localStorage.getItem('hour-21'));
   $('#hour-22 .description').val(localStorage.getItem('hour-22'));
   $('#hour-23 .description').val(localStorage.getItem('hour-23'));
+
+
+   // clear local storage and page on click
+   $('#clearDay').on('click', function () {
+    localStorage.clear();
+    location.reload();
+  });
 
   // TODO: Add code to display the current date in the header of the page.
 });
