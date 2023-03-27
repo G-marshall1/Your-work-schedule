@@ -1,12 +1,3 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
-
-var today = dayjs();
-$('#currentDay').text(today.format('MMM D, YYYY, h:mm a'));
-
-
 
 $(function () {
 //added save button to local storage
@@ -57,5 +48,7 @@ $('.time-block').each(function () {
     location.reload();
   });
 
-  // TODO: Add code to display the current date in the header of the page.
+// displays the current date in the header of the page.
+  var today = dayjs();
+$('#currentDay').text(today.format('MMM D, YYYY, h:mm a'));
 });
