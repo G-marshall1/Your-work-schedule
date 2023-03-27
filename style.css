@@ -57,3 +57,13 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+#clearDay {
+  background-color: #f1efef;
+  color: rgb(2, 1, 1);
+}
+
+#clearDay:hover {
+  background-color: #f60202;
+  color: rgb(253, 252, 252);
+}
